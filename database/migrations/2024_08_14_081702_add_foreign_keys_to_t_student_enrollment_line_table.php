@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('t_student_enrollment_line', function (Blueprint $table) {
+            $table->foreign(['ENROLLMENT_ID'], 't_student_enrollment_line_ibfk_1')->references(['ID'])->on('t_student_enrollment')->onUpdate('restrict')->onDelete('cascade');
+            $table->foreign(['SECTION_OFFERING_LINE'], 't_student_enrollment_line_ibfk_3')->references(['ID'])->on('t_section_offering_subject')->onUpdate('restrict')->onDelete('restrict');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('t_student_enrollment_line', function (Blueprint $table) {
+            $table->dropForeign('t_student_enrollment_line_ibfk_1');
+            $table->dropForeign('t_student_enrollment_line_ibfk_3');
+        });
+    }
+};
