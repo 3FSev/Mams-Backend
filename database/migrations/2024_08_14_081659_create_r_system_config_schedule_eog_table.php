@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_system_config_schedule_eog', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('FACULTY')->nullable()->index('faculty');
             $table->dateTime('SCHED_FROM')->nullable();
             $table->dateTime('SCHED_TO')->nullable();

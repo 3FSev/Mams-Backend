@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_remedial', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SUBJECT')->index('fk_subject_idx');
             $table->integer('STUDENT')->index('fk_student_idx');
             $table->string('STATUS', 25)->default('Not Taken');

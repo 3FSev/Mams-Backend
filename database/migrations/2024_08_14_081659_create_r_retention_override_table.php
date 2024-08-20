@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_retention_override', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('student_id')->nullable();
             $table->integer('sy_sem')->nullable();
             $table->integer('course')->nullable();

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_yr_levelling', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('COURSE')->nullable();
             $table->decimal('PERCENTAGE', 11);
             $table->integer('PRIORITY')->nullable();

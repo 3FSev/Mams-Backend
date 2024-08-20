@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_fee_basic_adjustment', function (Blueprint $table) {
-            $table->foreign(['FEE_ID'], 't_fee_basic_ibfk_11')->references(['ID'])->on('r_fee_basic')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['FEE_ID'], 't_fee_basic_ibfk_11')->references(['id'])->on('r_fee_basic')->onUpdate('restrict')->onDelete('restrict');
             $table->foreign(['SY'], 't_fee_basic_ibfk_22')->references(['CODE'])->on('r_sy')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SYSEM'], 't_fee_basic_ibfk_33')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['TRACK'], 't_fee_basic_ibfk_44')->references(['ID'])->on('r_track')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SYSEM'], 't_fee_basic_ibfk_33')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['TRACK'], 't_fee_basic_ibfk_44')->references(['id'])->on('r_track')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

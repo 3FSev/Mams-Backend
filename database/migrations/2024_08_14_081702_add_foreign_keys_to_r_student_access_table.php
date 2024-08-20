@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_student_access', function (Blueprint $table) {
-            $table->foreign(['STUDENT_ID'], 'r_student_access_ibfk_1')->references(['ID'])->on('t_student')->onUpdate('restrict')->onDelete('cascade');
+            $table->foreign(['STUDENT_ID'], 'r_student_access_ibfk_1')->references(['id'])->on('t_student')->onUpdate('restrict')->onDelete('cascade');
         });
     }
 

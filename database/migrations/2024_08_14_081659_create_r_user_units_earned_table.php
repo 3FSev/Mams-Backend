@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_user_units_earned', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('USER_PROFILE');
             $table->string('PROGRAM', 100)->nullable();
             $table->string('DISCIPLINE', 50)->nullable();

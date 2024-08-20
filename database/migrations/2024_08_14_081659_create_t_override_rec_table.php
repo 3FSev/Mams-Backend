@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_override_rec', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('CODE', 100)->nullable();
             $table->timestamp('DATE_ADDED')->useCurrent();
             $table->integer('USER')->nullable()->index('user');

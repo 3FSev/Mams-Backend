@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_counter', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->string('description', 50)->nullable();
             $table->string('status', 50)->nullable()->default('Active');
         });

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_faculty_load_sched', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SY_SEM');
             $table->date('DATE_FROM');
             $table->date('DATE_TO');

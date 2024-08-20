@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_account', function (Blueprint $table) {
-            $table->integer('userid')->nullable()->index('userid');
+            $table->id();
             $table->string('username', 50)->nullable();
             $table->string('password', 50)->nullable();
             $table->string('status', 10)->nullable()->default('Active');

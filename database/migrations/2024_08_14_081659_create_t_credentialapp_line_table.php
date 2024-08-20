@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_credentialapp_line', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->string('REQUESTID', 100)->nullable();
             $table->string('REQUEST', 10)->nullable();
             $table->string('SEM', 100)->nullable();

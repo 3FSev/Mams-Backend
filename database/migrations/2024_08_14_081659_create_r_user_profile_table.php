@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_user_profile', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('USER');
             $table->string('STATUS', 5);
             $table->date('DATE_REQUEST');

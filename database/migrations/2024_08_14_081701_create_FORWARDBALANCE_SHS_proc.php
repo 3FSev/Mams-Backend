@@ -21,11 +21,11 @@ DECLARE emprec CURSOR FOR
 	FROM t_payment p
 	WHERE p.sysem = fr_sem AND program_type = 'SHS' AND p.is_void = 0
 	AND p.student_id IN
-	(SELECT ts.ID
+	(SELECT ts.id
 	FROM 	`t_applicant` ta INNER JOIN t_student ts
 		ON ta.id = ts.`APPLICANT` 	
 		INNER JOIN `t_student_enrollment_shs` tse
-		ON tse.student = ts.`ID`
+		ON tse.student = ts.`id`
 		INNER JOIN t_student_enrollment_shs_line tsel
 		ON tse.id = tsel.enrollment_id
 		INNER JOIN `t_assessment_shs` tas

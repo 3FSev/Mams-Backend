@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_payment_sched', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SYSEM')->nullable();
             $table->integer('PAYMENT')->nullable();
             $table->decimal('TUITION_FEE', 11)->nullable();

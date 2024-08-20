@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_accreditation', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('STUDENT_ID')->nullable()->index('student_id');
             $table->timestamp('DATE_PROCESSED')->useCurrent();
             $table->string('SUB_CODE', 250)->nullable();

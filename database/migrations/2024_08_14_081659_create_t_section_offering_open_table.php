@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_section_offering_open', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SECTION_OFFERING')->index('t_section_offering_open_ibfk_2');
             $table->integer('COURSE')->index('course');
         });

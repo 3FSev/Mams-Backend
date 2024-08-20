@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_promisory', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('fromsysem')->nullable();
             $table->integer('tosysem')->nullable();
             $table->integer('processed_by')->nullable();

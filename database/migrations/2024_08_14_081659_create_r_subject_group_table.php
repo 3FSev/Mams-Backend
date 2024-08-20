@@ -12,9 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_subject_group', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('GROUP');
-            $table->integer('SUB')->index('fk_subj_group_sub');
+            $table->unsignedBigInteger('subject_id');
+
+            $table->foreign('subject_id')->references('id')->on('r_subject');
         });
     }
 

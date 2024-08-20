@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_interview_gs', function (Blueprint $table) {
-            $table->foreign(['APPLICANTID'], 't_interview_gs_ibfk_1')->references(['ID'])->on('t_applicant')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['INTERVIEWER'], 't_interview_gs_ibfk_2')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['PROGRAM'], 't_interview_gs_ibfk_3')->references(['ID'])->on('r_course')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['APPLICANTID'], 't_interview_gs_ibfk_1')->references(['id'])->on('t_applicant')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['INTERVIEWER'], 't_interview_gs_ibfk_2')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['PROGRAM'], 't_interview_gs_ibfk_3')->references(['id'])->on('r_course')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_student_enrollment_shs', function (Blueprint $table) {
-            $table->foreign(['SYSEM'], 't_student_enrollment_shs_ibfk_1')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['STUDENT'], 't_student_enrollment_shs_ibfk_2')->references(['ID'])->on('t_student')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SECTION'], 't_student_enrollment_shs_ibfk_3')->references(['ID'])->on('r_section_basic')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SYSEM'], 't_student_enrollment_shs_ibfk_1')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['STUDENT'], 't_student_enrollment_shs_ibfk_2')->references(['id'])->on('t_student')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SECTION'], 't_student_enrollment_shs_ibfk_3')->references(['id'])->on('r_section_basic')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

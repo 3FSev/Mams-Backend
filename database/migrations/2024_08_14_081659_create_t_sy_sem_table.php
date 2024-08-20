@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_sy_sem', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('CODE', 25);
             $table->integer('SY')->index('sy');
             $table->string('TERM', 11);

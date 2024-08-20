@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_user_licensure_passed', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('USER_PROFILE');
             $table->string('EXAMINATION', 15)->nullable();
             $table->string('TITLE', 50)->nullable();

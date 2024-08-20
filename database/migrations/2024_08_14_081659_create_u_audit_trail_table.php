@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('u_audit_trail', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->text('DESCRIPTION');
             $table->integer('USER_ID');
             $table->string('USER_TYPE', 25);

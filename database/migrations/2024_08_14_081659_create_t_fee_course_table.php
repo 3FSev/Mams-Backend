@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_fee_course', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SY_SEM')->index('sy_sem');
             $table->string('STUDENT_TYPE', 25)->nullable()->default('All');
             $table->integer('FEE')->index('fee');

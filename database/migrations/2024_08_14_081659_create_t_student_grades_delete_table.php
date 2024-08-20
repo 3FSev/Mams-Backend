@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_student_grades_delete', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SOSID')->nullable();
             $table->integer('SUBJECT_ID')->nullable();
             $table->string('FINALGRADE', 20)->nullable();

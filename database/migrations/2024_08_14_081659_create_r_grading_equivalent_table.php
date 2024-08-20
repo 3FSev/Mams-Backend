@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_grading_equivalent', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('GRADE', 10)->nullable();
             $table->string('EQUIVALENT', 20)->nullable();
             $table->string('REMARKS', 20)->nullable();

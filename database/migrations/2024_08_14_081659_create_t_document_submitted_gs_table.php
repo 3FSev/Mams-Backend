@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_document_submitted_gs', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('APPLICANT')->nullable()->index('applicant');
             $table->integer('DOCUMENT_ID')->nullable()->index('document_id');
             $table->string('PATH', 250)->nullable();

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_shift_history', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('STUD_ID')->nullable();
             $table->integer('APPLICANT')->nullable();
             $table->string('STUDENT_NO', 100)->nullable();

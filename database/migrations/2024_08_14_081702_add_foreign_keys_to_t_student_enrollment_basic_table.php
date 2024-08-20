@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::table('t_student_enrollment_basic', function (Blueprint $table) {
             $table->foreign(['SY'], 't_student_enrollment_basic_ibfk_1')->references(['CODE'])->on('r_sy')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['STUDENT'], 't_student_enrollment_basic_ibfk_2')->references(['ID'])->on('t_student')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SECTION'], 't_student_enrollment_basic_ibfk_3')->references(['ID'])->on('r_section_basic')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SECTION_OFFERING_ELEM_ID'], 't_student_enrollment_basic_ibfk_4')->references(['ID'])->on('t_section_offering_elem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['STUDENT'], 't_student_enrollment_basic_ibfk_2')->references(['id'])->on('t_student')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SECTION'], 't_student_enrollment_basic_ibfk_3')->references(['id'])->on('r_section_basic')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SECTION_OFFERING_ELEM_ID'], 't_student_enrollment_basic_ibfk_4')->references(['id'])->on('t_section_offering_elem')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

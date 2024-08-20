@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_section_offering_elem', function (Blueprint $table) {
-            $table->foreign(['SECTION'], 't_section_offering_elem_ibfk_1')->references(['ID'])->on('r_section_basic')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SECTION'], 't_section_offering_elem_ibfk_1')->references(['id'])->on('r_section_basic')->onUpdate('restrict')->onDelete('restrict');
             $table->foreign(['SY'], 't_section_offering_elem_ibfk_2')->references(['CODE'])->on('r_sy')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['CURRICULUM'], 't_section_offering_elem_ibfk_3')->references(['ID'])->on('r_curriculum_elem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['CAMPUS'], 't_section_offering_elem_ibfk_4')->references(['ID'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['CURRICULUM'], 't_section_offering_elem_ibfk_3')->references(['id'])->on('r_curriculum_elem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['CAMPUS'], 't_section_offering_elem_ibfk_4')->references(['id'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

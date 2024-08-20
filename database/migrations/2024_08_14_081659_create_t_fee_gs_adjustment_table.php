@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_fee_gs_adjustment', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('sysem')->nullable()->index('sysem_2');
             $table->integer('program')->nullable()->index('program');
             $table->integer('fee')->nullable()->index('fee');

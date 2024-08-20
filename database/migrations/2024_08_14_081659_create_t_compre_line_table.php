@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_compre_line', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('COMPRE')->index('fk_compre_cl');
             $table->integer('SUBJECT')->index('fk_subject_cl');
             $table->decimal('GRADE', 10);

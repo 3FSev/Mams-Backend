@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_subject_equivalency_manual', function (Blueprint $table) {
-            $table->integer('ID', true);
-            $table->integer('STUDENT_ID')->nullable();
+            $table->id();
+            $table->unsignedBigInteger('student_id');
             $table->dateTime('DATE_PROCESSED')->nullable();
             $table->integer('CURR_LINE_ID')->nullable();
             $table->string('SUB_CODE', 50)->nullable();
@@ -34,6 +34,8 @@ return new class extends Migration
             $table->string('OLD_GRADE', 100)->nullable();
             $table->binary('CROSS_ENROLLED')->nullable()->default('0');
             $table->string('ACADEMIC_TYPE', 50)->nullable();
+
+            $table->foreign('student_id')->references('id')->on('t_student');
         });
     }
 

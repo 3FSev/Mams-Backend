@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_compre_fee', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('PROGRAM')->index('fk_compre_program');
             $table->integer('SY_SEM')->index('fk_compre_sy');
             $table->decimal('AMOUNT', 10);

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_general_clearance_approval', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('OFFICE', 100)->nullable();
             $table->integer('SIGNATORY')->nullable();
             $table->integer('STUDENT')->nullable();

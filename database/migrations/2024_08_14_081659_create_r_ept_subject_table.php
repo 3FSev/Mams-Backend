@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_ept_subject', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('EQUIV_SUBJECT')->nullable()->index('equiv_subject');
             $table->integer('REPLACEMENT_FOR')->nullable()->index('replacement_for');
         });

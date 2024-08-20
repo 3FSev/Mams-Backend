@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_override_rec', function (Blueprint $table) {
-            $table->foreign(['USER'], 't_override_rec_ibfk_1')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['USER'], 't_override_rec_ibfk_1')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

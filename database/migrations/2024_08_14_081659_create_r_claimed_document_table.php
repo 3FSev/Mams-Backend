@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_claimed_document', function (Blueprint $table) {
-            $table->integer('ID', true)->index('id');
+            $table->id();
             $table->string('DESCRIPTION', 100)->nullable();
             $table->string('COUNTREQ', 50)->nullable();
         });

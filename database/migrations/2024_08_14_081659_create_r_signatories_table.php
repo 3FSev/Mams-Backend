@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_signatories', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('REPORT')->nullable()->index('report');
             $table->integer('PREPARED_BY')->nullable()->index('prepared_by');
             $table->integer('CHECKED_BY')->nullable()->index('checked_by');

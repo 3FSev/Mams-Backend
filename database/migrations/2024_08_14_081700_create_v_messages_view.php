@@ -10,7 +10,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        DB::statement("CREATE VIEW `v_messages` AS select `ts`.`ID` AS `id`,`ts`.`STUDENT_NO` AS `student_no`,concat(`ta`.`FNAME`,' ',`ta`.`LNAME`) AS `username`,`rcl`.`CODE` AS `DEPT` from (((`dwcc_data`.`t_applicant` `ta` join `dwcc_data`.`t_student` `ts` on(`ts`.`APPLICANT` = `ta`.`ID` and (ucase(`ts`.`STUD_PROGRAM_TYPE`) = 'COLLEGE' or `ts`.`STUD_PROGRAM_TYPE` = 'GS'))) join `dwcc_data`.`r_course` `rc` on(`ts`.`COURSE` = `rc`.`ID`)) join `dwcc_data`.`r_college` `rcl` on(`rc`.`COLLEGE` = `rcl`.`ID`)) union all select `dwcc_data`.`m_user`.`id` AS `id`,`dwcc_data`.`m_user`.`u_name` AS `u_name`,`dwcc_data`.`m_user`.`username` AS `username`,'' AS `Name_exp_8` from `dwcc_data`.`m_user`");
+        DB::statement("CREATE VIEW `v_messages` AS select `ts`.`id` AS `id`,`ts`.`STUDENT_NO` AS `student_no`,concat(`ta`.`FNAME`,' ',`ta`.`LNAME`) AS `username`,`rcl`.`CODE` AS `DEPT` from (((`dwcc_data`.`t_applicant` `ta` join `dwcc_data`.`t_student` `ts` on(`ts`.`APPLICANT` = `ta`.`id` and (ucase(`ts`.`STUD_PROGRAM_TYPE`) = 'COLLEGE' or `ts`.`STUD_PROGRAM_TYPE` = 'GS'))) join `dwcc_data`.`r_course` `rc` on(`ts`.`COURSE` = `rc`.`id`)) join `dwcc_data`.`r_college` `rcl` on(`rc`.`COLLEGE` = `rcl`.`id`)) union all select `dwcc_data`.`m_user`.`id` AS `id`,`dwcc_data`.`m_user`.`u_name` AS `u_name`,`dwcc_data`.`m_user`.`username` AS `username`,'' AS `Name_exp_8` from `dwcc_data`.`m_user`");
     }
 
     /**

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tblstudclasslist', function (Blueprint $table) {
-            $table->integer('ID', true)->index('id');
+            $table->integer('id', true)->index('id');
             $table->string('SY', 4);
             $table->string('CourseCode', 15)->index('coursecode');
             $table->smallInteger('YearLevel')->default(0)->index('yearlevel');

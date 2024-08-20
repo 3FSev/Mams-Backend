@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_student', function (Blueprint $table) {
-            $table->integer('ID', true)->unique('id');
+            $table->integer('id', true)->unique('id');
             $table->integer('APPLICANT')->nullable()->unique('ixapplicantid');
             $table->string('STUDENT_NO', 250)->nullable();
             $table->integer('CURRICULUM')->nullable()->index('curriculum');
@@ -53,7 +53,7 @@ return new class extends Migration
             $table->string('NSTP_SN', 50)->nullable();
             $table->string('LEARNING', 100)->nullable();
 
-            $table->primary(['ID']);
+            $table->primary(['id']);
         });
     }
 

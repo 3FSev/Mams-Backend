@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_applicant_family_background', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('app_id')->nullable();
             $table->string('f_fname', 50)->nullable();
             $table->string('f_mname', 50)->nullable();

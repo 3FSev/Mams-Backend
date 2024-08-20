@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_discount', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('DISCOUNT')->index('discount');
             $table->decimal('TF_FIXED', 11)->nullable();
             $table->decimal('TF_PERCENT', 11)->nullable();

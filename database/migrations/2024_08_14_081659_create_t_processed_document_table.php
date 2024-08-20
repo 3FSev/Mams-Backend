@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_processed_document', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('STUDENT')->nullable()->index('student');
             $table->integer('DOCUMENT_ID')->nullable()->index('document_id');
             $table->dateTime('DATE_REQUESTED')->nullable();

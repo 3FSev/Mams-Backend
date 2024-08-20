@@ -15,7 +15,7 @@ BEGIN
   DECLARE done INT DEFAULT FALSE;
   DECLARE proc_id INT;
   DECLARE cur CURSOR FOR
-    SELECT ID
+    SELECT id
     FROM information_schema.processlist
     WHERE 
         HOST LIKE '192.168.0.10%' OR

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('r_system_config_schedule_basic', function (Blueprint $table) {
             $table->foreign(['SY'], 'r_system_config_schedule_basic_ibfk_1')->references(['CODE'])->on('r_sy')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['CAMPUS'], 'r_system_config_schedule_basic_ibfk_2')->references(['ID'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['CAMPUS'], 'r_system_config_schedule_basic_ibfk_2')->references(['id'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

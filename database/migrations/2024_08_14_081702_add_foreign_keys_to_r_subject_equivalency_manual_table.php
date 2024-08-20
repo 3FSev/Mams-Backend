@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_subject_equivalency_manual', function (Blueprint $table) {
-            $table->foreign(['SUBJECT_ID'], 'r_subject_equivalency_manual_ibfk_1')->references(['ID'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SUBJECT_ID'], 'r_subject_equivalency_manual_ibfk_1')->references(['id'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

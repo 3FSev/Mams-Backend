@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_audit_curriculum', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('CURRICULUM_ID')->nullable();
             $table->integer('USER_ID')->nullable();
             $table->text('USER_ACTION')->nullable();

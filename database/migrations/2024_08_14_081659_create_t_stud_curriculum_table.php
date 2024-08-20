@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_stud_curriculum', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('STUDENT_ID')->nullable()->index('student_id');
             $table->string('STUD_PROGRAM_TYPE', 25)->nullable();
             $table->integer('CURRICULUM')->nullable();

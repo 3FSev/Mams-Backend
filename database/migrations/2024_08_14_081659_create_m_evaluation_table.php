@@ -12,13 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('m_evaluation', function (Blueprint $table) {
-            $table->integer('id', true);
-            $table->integer('sosid');
-            $table->integer('fid');
-            $table->integer('student');
-            $table->integer('sysem')->nullable();
+            $table->id();
+            $table->unsignedBigInteger('sos_id');
+            $table->unsignedBigInteger('f_id');
+            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('sysem')->nullable();
             $table->timestamp('date_taken')->useCurrent();
             $table->text('comment')->nullable();
+            
+            $table->foreign('sos_id')->references('id')->on('t_section_offering_subject');
         });
     }
 

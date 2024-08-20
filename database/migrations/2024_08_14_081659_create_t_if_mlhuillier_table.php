@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_if_mlhuillier', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('imported_by')->nullable();
             $table->string('import_status', 25)->nullable()->default('Pending');
             $table->dateTime('import_date_time')->nullable();

@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_compre_line', function (Blueprint $table) {
-            $table->foreign(['COMPRE'], 'fk_compre_cl')->references(['ID'])->on('t_compre')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['FACULTY'], 'fk_faculty_cl')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SUBJECT'], 'fk_subject_cl')->references(['ID'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['COMPRE'], 'fk_compre_cl')->references(['id'])->on('t_compre')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['FACULTY'], 'fk_faculty_cl')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SUBJECT'], 'fk_subject_cl')->references(['id'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

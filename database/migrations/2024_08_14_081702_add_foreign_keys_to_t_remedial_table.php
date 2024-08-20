@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_remedial', function (Blueprint $table) {
-            $table->foreign(['STUDENT'], 'fk_student')->references(['ID'])->on('t_student')->onUpdate('no action')->onDelete('no action');
-            $table->foreign(['SUBJECT'], 'fk_subject')->references(['ID'])->on('r_subject')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['STUDENT'], 'fk_student')->references(['id'])->on('t_student')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['SUBJECT'], 'fk_subject')->references(['id'])->on('r_subject')->onUpdate('no action')->onDelete('no action');
         });
     }
 

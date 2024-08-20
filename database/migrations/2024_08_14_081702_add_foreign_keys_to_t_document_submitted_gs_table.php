@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_document_submitted_gs', function (Blueprint $table) {
-            $table->foreign(['APPLICANT'], 't_document_submitted_gs_ibfk_1')->references(['ID'])->on('t_applicant')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['DOCUMENT_ID'], 't_document_submitted_gs_ibfk_2')->references(['ID'])->on('r_document_gs')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['APPLICANT'], 't_document_submitted_gs_ibfk_1')->references(['id'])->on('t_applicant')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['DOCUMENT_ID'], 't_document_submitted_gs_ibfk_2')->references(['id'])->on('r_document_gs')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

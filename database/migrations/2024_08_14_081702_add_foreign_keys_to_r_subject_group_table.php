@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_subject_group', function (Blueprint $table) {
-            $table->foreign(['SUB'], 'r_subject_group_ibfk_1')->references(['ID'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SUB'], 'r_subject_group_ibfk_2')->references(['ID'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SUB'], 'r_subject_group_ibfk_3')->references(['ID'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SUB'], 'r_subject_group_ibfk_1')->references(['id'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SUB'], 'r_subject_group_ibfk_2')->references(['id'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SUB'], 'r_subject_group_ibfk_3')->references(['id'])->on('r_subject')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

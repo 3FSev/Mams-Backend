@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_compre_fee', function (Blueprint $table) {
-            $table->foreign(['PROGRAM'], 'fk_compre_program')->references(['ID'])->on('r_course')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['SY_SEM'], 'fk_compre_sy')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['PROGRAM'], 'fk_compre_program')->references(['id'])->on('r_course')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SY_SEM'], 'fk_compre_sy')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

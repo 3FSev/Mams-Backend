@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_applicant_educ_attainment', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('app_id')->nullable();
             $table->string('name_of_school', 100)->nullable();
             $table->string('course', 100)->nullable();

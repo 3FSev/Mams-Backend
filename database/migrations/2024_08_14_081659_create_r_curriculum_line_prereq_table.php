@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_curriculum_line_prereq', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('CURR_LINE_ID')->index('curr_line__id');
             $table->integer('SUBJECT_CURR_ID');
             $table->string('GRADE', 50)->nullable();

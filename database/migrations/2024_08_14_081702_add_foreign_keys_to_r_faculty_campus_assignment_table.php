@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_faculty_campus_assignment', function (Blueprint $table) {
-            $table->foreign(['campus'], 'fk_campus')->references(['ID'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['department'], 'fk_college')->references(['ID'])->on('r_college')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['faculty'], 'fk_faculty')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['faculty_type'], 'fk_type')->references(['ID'])->on('r_faculty_type')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['campus'], 'fk_campus')->references(['id'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['department'], 'fk_college')->references(['id'])->on('r_college')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['faculty'], 'fk_faculty')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['faculty_type'], 'fk_type')->references(['id'])->on('r_faculty_type')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

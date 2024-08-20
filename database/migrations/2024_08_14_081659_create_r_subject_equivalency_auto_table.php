@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_subject_equivalency_auto', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SUBJECT')->nullable()->comment('subject_id');
             $table->integer('SUBJECT_EQUIV')->nullable()->comment('subject_id');
             $table->string('STATUS', 25)->nullable()->default('Active');

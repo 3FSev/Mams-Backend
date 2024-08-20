@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_signatories', function (Blueprint $table) {
-            $table->foreign(['REPORT'], 'r_signatories_ibfk_1')->references(['ID'])->on('r_report')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['PREPARED_BY'], 'r_signatories_ibfk_2')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['CHECKED_BY'], 'r_signatories_ibfk_3')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['OFFICE_HEAD'], 'r_signatories_ibfk_4')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['REPORT'], 'r_signatories_ibfk_1')->references(['id'])->on('r_report')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['PREPARED_BY'], 'r_signatories_ibfk_2')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['CHECKED_BY'], 'r_signatories_ibfk_3')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['OFFICE_HEAD'], 'r_signatories_ibfk_4')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

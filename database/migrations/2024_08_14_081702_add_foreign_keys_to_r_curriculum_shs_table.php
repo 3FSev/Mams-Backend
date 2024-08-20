@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_curriculum_shs', function (Blueprint $table) {
-            $table->foreign(['STRAND'], 'r_curriculum_shs_ibfk_1')->references(['ID'])->on('r_strand')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['TRACK'], 'r_curriculum_shs_ibfk_2')->references(['ID'])->on('r_track')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['STRAND'], 'r_curriculum_shs_ibfk_1')->references(['id'])->on('r_strand')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['TRACK'], 'r_curriculum_shs_ibfk_2')->references(['id'])->on('r_track')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

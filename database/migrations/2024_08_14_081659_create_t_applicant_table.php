@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_applicant', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->date('DATEAPPLIED')->nullable();
             $table->string('FNAME', 100)->nullable();
             $table->string('MNAME', 100)->nullable();

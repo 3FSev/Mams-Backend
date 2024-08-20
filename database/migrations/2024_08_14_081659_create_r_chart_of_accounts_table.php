@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_chart_of_accounts', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->string('description', 100)->nullable();
             $table->string('for_cashier', 11)->nullable()->default('No');
             $table->string('status', 11)->nullable()->default('Active');

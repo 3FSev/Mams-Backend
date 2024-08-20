@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('t_applicant', function (Blueprint $table) {
             $table->foreign(['GUARDIAN'], 't_applicant_ibfk_1')->references(['GUARDIAN_ID'])->on('r_guardian')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['CAMPUS'], 't_applicant_ibfk_2')->references(['ID'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['CAMPUS'], 't_applicant_ibfk_2')->references(['id'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
             $table->foreign(['PARENT'], 't_applicant_ibfk_3')->references(['PARENT_ID'])->on('r_parent')->onUpdate('cascade')->onDelete('cascade');
         });
     }

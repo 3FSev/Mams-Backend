@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_assessment', function (Blueprint $table) {
-            $table->foreign(['ENROLLMENT_ID'], 't_assessment_ibfk_1')->references(['ID'])->on('t_student_enrollment')->onUpdate('restrict')->onDelete('cascade');
-            $table->foreign(['SY_SEM'], 't_assessment_ibfk_2')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['STUDENT_ID'], 't_assessment_ibfk_3')->references(['ID'])->on('t_student')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['ENROLLMENT_ID'], 't_assessment_ibfk_1')->references(['id'])->on('t_student_enrollment')->onUpdate('restrict')->onDelete('cascade');
+            $table->foreign(['SY_SEM'], 't_assessment_ibfk_2')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['STUDENT_ID'], 't_assessment_ibfk_3')->references(['id'])->on('t_student')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

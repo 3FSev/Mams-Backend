@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('company_profile', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('COMPANY_NAME', 250)->nullable();
             $table->string('COMPANY_LOGO', 250)->nullable();
             $table->text('COMPANY_ADDRESS')->nullable();

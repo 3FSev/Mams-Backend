@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_fee_room', function (Blueprint $table) {
-            $table->foreign(['SY_SEM'], 't_fee_room_ibfk_1')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['FEE'], 't_fee_room_ibfk_2')->references(['ID'])->on('r_fee')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['ROOM'], 't_fee_room_ibfk_3')->references(['ID'])->on('r_room')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SY_SEM'], 't_fee_room_ibfk_1')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['FEE'], 't_fee_room_ibfk_2')->references(['id'])->on('r_fee')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['ROOM'], 't_fee_room_ibfk_3')->references(['id'])->on('r_room')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

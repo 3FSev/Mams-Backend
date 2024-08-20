@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_clearance_office', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('CODE', 20)->nullable();
             $table->string('NAME', 100)->nullable();
             $table->integer('OFFICE_HEAD')->nullable();

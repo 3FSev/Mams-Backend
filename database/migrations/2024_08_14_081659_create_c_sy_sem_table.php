@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('c_sy_sem', function (Blueprint $table) {
-            $table->integer('ID', true);
-            $table->string('CODE', 25);
-            $table->integer('SY')->index('sy');
+            $table->id();
+            $table->string('CODE', 25)->unique();
+            $table->integer('SY');
             $table->string('TERM', 11);
             $table->string('STATUS', 25)->default('Active');
         });

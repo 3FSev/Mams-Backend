@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('u_function', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('CONTROLLER', 50);
             $table->string('FUNCTION', 50);
             $table->string('NAVIGATION_NAME', 100);

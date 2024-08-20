@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_subject_basic_group', function (Blueprint $table) {
-            $table->foreign(['GROUP'], 'fk_group')->references(['ID'])->on('r_subject_basic')->onUpdate('no action')->onDelete('no action');
-            $table->foreign(['SUB'], 'fk_sub')->references(['ID'])->on('r_subject_basic')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['GROUP'], 'fk_group')->references(['id'])->on('r_subject_basic')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['SUB'], 'fk_sub')->references(['id'])->on('r_subject_basic')->onUpdate('no action')->onDelete('no action');
         });
     }
 

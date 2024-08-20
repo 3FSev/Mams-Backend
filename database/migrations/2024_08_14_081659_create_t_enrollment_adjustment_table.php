@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_enrollment_adjustment', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->integer('sysem')->nullable();
             $table->string('program_type', 50)->nullable();
             $table->integer('enrollment_id')->nullable();

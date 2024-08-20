@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_system_config_schedule_eog', function (Blueprint $table) {
-            $table->foreign(['FACULTY'], 'r_system_config_schedule_eog_ibfk_1')->references(['ID'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['FACULTY'], 'r_system_config_schedule_eog_ibfk_1')->references(['id'])->on('r_user')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

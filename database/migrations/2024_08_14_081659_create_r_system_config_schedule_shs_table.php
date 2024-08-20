@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_system_config_schedule_shs', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('LABEL', 100)->nullable();
             $table->integer('GRADE_LVL')->nullable();
             $table->dateTime('SCHED_FROM')->nullable();

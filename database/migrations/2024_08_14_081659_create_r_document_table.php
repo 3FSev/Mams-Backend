@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_document', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('DESCRIPTION', 100)->nullable();
             $table->string('MANDATORY', 10)->nullable();
             $table->string('APPLICANT_TYPE', 100)->nullable();

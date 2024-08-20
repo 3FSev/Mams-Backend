@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_grading_system', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('LABEL', 100);
             $table->decimal('PERCENT', 10);
             $table->string('STATUS', 10)->default('Active');

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('allowed_by')->nullable();
             $table->string('atatus', 25)->nullable()->default('Active');
             $table->decimal('amount', 11)->nullable();
-            $table->integer('id', true);
+            $table->id();
             $table->date('date_processed')->nullable();
             $table->integer('sy')->nullable();
         });

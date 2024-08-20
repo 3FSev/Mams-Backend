@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_subject_basic_group', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('GROUP')->index('fk_group_idx');
             $table->integer('SUB')->index('fk_sub_idx');
         });

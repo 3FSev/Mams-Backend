@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_student_grades_line_basic', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('SGID')->nullable();
             $table->string('GRADING_SYSTEM_LABEL', 50)->nullable();
             $table->decimal('GRADING_SYSTEM_PERCENT', 10)->nullable();

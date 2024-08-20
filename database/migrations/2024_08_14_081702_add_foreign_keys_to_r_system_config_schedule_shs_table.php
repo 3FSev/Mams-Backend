@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_system_config_schedule_shs', function (Blueprint $table) {
-            $table->foreign(['SY_SEM'], 'r_system_config_schedule_shs_ibfk_1')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['CAMPUS'], 'r_system_config_schedule_shs_ibfk_2')->references(['ID'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SY_SEM'], 'r_system_config_schedule_shs_ibfk_1')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['CAMPUS'], 'r_system_config_schedule_shs_ibfk_2')->references(['id'])->on('r_campus')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

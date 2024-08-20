@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_or_series', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('CREDIT_START')->nullable();
             $table->integer('CREDIT_END')->nullable();
             $table->integer('CREDIT_IN_USE')->nullable();

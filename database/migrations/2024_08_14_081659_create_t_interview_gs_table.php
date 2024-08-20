@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_interview_gs', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('APPLICANTID')->nullable()->index('applicantid');
             $table->integer('INTERVIEWER')->nullable()->index('interviewer');
             $table->integer('PROGRAM')->nullable()->index('program');

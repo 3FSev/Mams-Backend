@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('app_health', function (Blueprint $table) {
-            $table->integer('appid')->nullable();
+            $table->id();
             $table->string('vision', 100)->nullable();
             $table->string('hearing', 100)->nullable();
             $table->string('speech', 100)->nullable();
@@ -24,9 +24,11 @@ return new class extends Migration
             $table->date('psychowhen')->nullable();
             $table->string('counselor', 100)->nullable();
             $table->date('counwhen')->nullable();
-            $table->string('applicant_no', 100)->nullable();
+            $table->unsignedBigInteger('applicant_id')->nullable();
             $table->string('updated_by', 50)->nullable();
             $table->date('date_updated')->nullable();
+
+            $table->foreign('applicant_id')->references('id')->on('t_applicant');
         });
     }
 

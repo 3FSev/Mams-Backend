@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_course_grade_prereq', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('YEAR_LEVEL')->nullable();
             $table->string('SEMESTER', 10)->nullable();
             $table->integer('COURSE')->nullable()->index('course');

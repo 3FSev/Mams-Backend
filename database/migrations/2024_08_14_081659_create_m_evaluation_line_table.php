@@ -12,9 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('m_evaluation_line', function (Blueprint $table) {
-            $table->integer('evaluationid')->index('evaluationid');
-            $table->integer('questionid');
+            $table->id();
+            $table->unsignedBigInteger('question_id');
             $table->integer('rate');
+
+            $table->foreign('question_id')->references('id')->on('m_question_list');
         });
     }
 

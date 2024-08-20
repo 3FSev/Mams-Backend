@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('t_fee_mandatory', function (Blueprint $table) {
-            $table->foreign(['SY_SEM'], 't_fee_mandatory_ibfk_1')->references(['ID'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
-            $table->foreign(['FEE'], 't_fee_mandatory_ibfk_2')->references(['ID'])->on('r_fee')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['SY_SEM'], 't_fee_mandatory_ibfk_1')->references(['id'])->on('t_sy_sem')->onUpdate('restrict')->onDelete('restrict');
+            $table->foreign(['FEE'], 't_fee_mandatory_ibfk_2')->references(['id'])->on('r_fee')->onUpdate('restrict')->onDelete('restrict');
         });
     }
 

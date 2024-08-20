@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('r_report', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('CODE', 100)->nullable();
             $table->text('DESCRIPTION')->nullable();
             $table->string('STATUS', 25)->nullable()->default('Active');

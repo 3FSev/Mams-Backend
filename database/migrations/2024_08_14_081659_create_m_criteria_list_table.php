@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('m_criteria_list', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->text('criteria');
             $table->integer('order_by');
         });

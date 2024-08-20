@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_student_enrollment_shs_line_history', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->integer('ENROLLMENT_ID')->nullable();
             $table->integer('SECTION_OFFERING_SUBJECT')->nullable();
             $table->timestamp('DATE_ENROLLED')->nullable()->useCurrent();

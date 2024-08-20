@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('r_course', function (Blueprint $table) {
-            $table->foreign(['COLLEGE'], 'r_course_ibfk_1')->references(['ID'])->on('r_college')->onUpdate('restrict')->onDelete('no action');
-            $table->foreign(['DEPARTMENT'], 'r_course_ibfk_2')->references(['ID'])->on('r_department')->onUpdate('restrict')->onDelete('no action');
+            $table->foreign(['COLLEGE'], 'r_course_ibfk_1')->references(['id'])->on('r_college')->onUpdate('restrict')->onDelete('no action');
+            $table->foreign(['DEPARTMENT'], 'r_course_ibfk_2')->references(['id'])->on('r_department')->onUpdate('restrict')->onDelete('no action');
         });
     }
 

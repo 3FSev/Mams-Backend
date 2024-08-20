@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_tor_rc', function (Blueprint $table) {
-            $table->integer('ID', true);
+            $table->id();
             $table->string('STUDENT_NO', 100)->nullable();
             $table->string('NAME', 250)->nullable();
             $table->string('COURSE', 100)->nullable();
