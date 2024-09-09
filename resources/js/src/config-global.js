@@ -6,7 +6,7 @@ import packageJson from '../../../package.json';
 
 export const CONFIG = {
   site: {
-    name: 'Minimals',
+    name: 'MAMS',
     serverUrl: import.meta.env.VITE_SERVER_URL ?? '',
     assetURL: import.meta.env.VITE_ASSET_URL ?? '',
     basePath: import.meta.env.VITE_BASE_PATH ?? '',
@@ -62,4 +62,12 @@ export const CONFIG = {
     url: import.meta.env.VITE_SUPABASE_URL ?? '',
     key: import.meta.env.VITE_SUPABASE_ANON_KEY ?? '',
   },
+
+  tableBoxStyle: {
+    width: '100%',
+    height: 650,
+    padding: 0,
+    margin: 0,
+  },
 };
+

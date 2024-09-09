@@ -20,7 +20,6 @@ import { NavVertical } from './nav-vertical';
 import { NavHorizontal } from './nav-horizontal';
 import { _account } from '../config-nav-account';
 import { HeaderBase } from '../core/header-base';
-import { _workspaces } from '../config-nav-workspace';
 import { LayoutSection } from '../core/layout-section';
 import { navData as dashboardNavData } from '../config-nav-dashboard';
 
@@ -68,7 +67,6 @@ export function DashboardLayout({ sx, children, data }) {
               langs: allLangs,
               account: _account,
               contacts: _contacts,
-              workspaces: _workspaces,
               notifications: _notifications,
             }}
             slotsDisplay={{
@@ -83,11 +81,7 @@ export function DashboardLayout({ sx, children, data }) {
                 </Alert>
               ),
               bottomArea: isNavHorizontal ? (
-                <NavHorizontal
-                  data={navData}
-                  layoutQuery={layoutQuery}
-                  cssVars={navColorVars.section}
-                />
+                <NavHorizontal data={navData} layoutQuery={layoutQuery} cssVars={navColorVars.section} />
               ) : null,
             }}
             slotProps={{
@@ -106,9 +100,6 @@ export function DashboardLayout({ sx, children, data }) {
                     },
                     [theme.breakpoints.up(layoutQuery)]: {
                       height: 'var(--layout-nav-horizontal-height)',
-                    },
-                    [`& [data-slot="workspaces"]`]: {
-                      color: 'var(--layout-nav-text-primary-color)',
                     },
                     [`& [data-slot="logo"]`]: {
                       display: 'none',
@@ -144,10 +135,7 @@ export function DashboardLayout({ sx, children, data }) {
               layoutQuery={layoutQuery}
               cssVars={navColorVars.section}
               onToggleNav={() =>
-                settings.onUpdateField(
-                  'navLayout',
-                  settings.navLayout === 'vertical' ? 'mini' : 'vertical'
-                )
+                settings.onUpdateField('navLayout', settings.navLayout === 'vertical' ? 'mini' : 'vertical')
               }
             />
           )
@@ -263,3 +251,4 @@ function useNavColorVars(theme, settings) {
     settings.navLayout,
   ]);
 }
+

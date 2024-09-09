@@ -2,11 +2,11 @@ import { Helmet } from 'react-helmet-async';
 
 import { CONFIG } from '@/config-global';
 
-import { SchoolYearData } from '../../../components/data-grid/view';
+import Main from '../../../layouts/admin/school-year';
 
 // ----------------------------------------------------------------------
 
-const metadata = { title: `Blank | Dashboard - ${CONFIG.site.name}` };
+const metadata = { title: `School Year | Admin - ${CONFIG.site.name}` };
 
 export default function Page() {
   return (
@@ -14,8 +14,7 @@ export default function Page() {
       <Helmet>
         <title> {metadata.title}</title>
       </Helmet>
-
-      <SchoolYearData />
+      <Main />
     </>
   );
 }

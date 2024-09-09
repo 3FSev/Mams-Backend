@@ -111,7 +111,8 @@ export const paths = {
       course: `${ROOTS.DASHBOARD}/course`,
     },
     admin: {
-      root: `${ROOTS.DASHBOARD}/admin/school_year`,
+      root: `${ROOTS.DASHBOARD}/admin`,
+      schoolyear: `${ROOTS.DASHBOARD}/admin/school_year`,
       createSem: `${ROOTS.DASHBOARD}/admin/create_sem`,
       facultyType: `${ROOTS.DASHBOARD}/admin/faculty_type`,
       user: `${ROOTS.DASHBOARD}/admin/user`,
@@ -134,12 +135,13 @@ export const paths = {
     accounting: {
       root: `${ROOTS.DASHBOARD}/accounting`,
       setup: {
-          root: `${ROOTS.DASHBOARD}/accounting/setup`,
-          payment: `${ROOTS.DASHBOARD}/accounting/setup/payment`,
-          counter: `${ROOTS.DASHBOARD}/accounting/setup/counter`,
-          coa: `${ROOTS.DASHBOARD}/accounting/setup/coa`,
-          feeElem: `${ROOTS.DASHBOARD}/accounting/setup/fee_elem`,
-          feeCollege: `${ROOTS.DASHBOARD}/accounting/setup/fee_college`
+        root: `${ROOTS.DASHBOARD}/accounting/setup`,
+        discount: `${ROOTS.DASHBOARD}/accounting/setup/discount`,
+        payment: `${ROOTS.DASHBOARD}/accounting/setup/payment`,
+        counter: `${ROOTS.DASHBOARD}/accounting/setup/counter`,
+        coa: `${ROOTS.DASHBOARD}/accounting/setup/coa`,
+        feeElem: `${ROOTS.DASHBOARD}/accounting/setup/fee_elem`,
+        feeCollege: `${ROOTS.DASHBOARD}/accounting/setup/fee_college`,
       },
       downOverride: `${ROOTS.DASHBOARD}/accounting/down_override`,
       plotDiscount: `${ROOTS.DASHBOARD}/accounting/plot_discount`,
@@ -149,43 +151,43 @@ export const paths = {
       faElem: `${ROOTS.DASHBOARD}/accounting/fa_elem`,
       faShs: `${ROOTS.DASHBOARD}/accounting/fa_shs`,
       faCollege: {
-          root: `${ROOTS.DASHBOARD}/accounting/fa_college`,
-          tf: `${ROOTS.DASHBOARD}/accounting/fa_college/tf`,
-          mf: `${ROOTS.DASHBOARD}/accounting/fa_college/mf`,
-          rf: `${ROOTS.DASHBOARD}/accounting/fa_college/rf`,
-          sf: `${ROOTS.DASHBOARD}/accounting/fa_college/sf`,
-          cf: `${ROOTS.DASHBOARD}/accounting/fa_college/cf`
+        root: `${ROOTS.DASHBOARD}/accounting/fa_college`,
+        tf: `${ROOTS.DASHBOARD}/accounting/fa_college/tf`,
+        mf: `${ROOTS.DASHBOARD}/accounting/fa_college/mf`,
+        rf: `${ROOTS.DASHBOARD}/accounting/fa_college/rf`,
+        sf: `${ROOTS.DASHBOARD}/accounting/fa_college/sf`,
+        cf: `${ROOTS.DASHBOARD}/accounting/fa_college/cf`,
       },
       faGS: {
-          root: `${ROOTS.DASHBOARD}/accounting/fa_gs`,
-          tf: `${ROOTS.DASHBOARD}/accounting/fa_gs/tf`,
-          mf: `${ROOTS.DASHBOARD}/accounting/fa_gs/mf`,
-          sf: `${ROOTS.DASHBOARD}/accounting/fa_gs/sf`
+        root: `${ROOTS.DASHBOARD}/accounting/fa_gs`,
+        tf: `${ROOTS.DASHBOARD}/accounting/fa_gs/tf`,
+        mf: `${ROOTS.DASHBOARD}/accounting/fa_gs/mf`,
+        sf: `${ROOTS.DASHBOARD}/accounting/fa_gs/sf`,
       },
       faAdjustElem: {
-          root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_elem`,
-          addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_elem/add_fee`,
-          deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_elem/delete_fee`
+        root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_elem`,
+        addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_elem/add_fee`,
+        deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_elem/delete_fee`,
       },
       faAdjustShs: {
-          root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_shs`,
-          addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_shs/add_fee`,
-          deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_shs/delete_fee`
+        root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_shs`,
+        addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_shs/add_fee`,
+        deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_shs/delete_fee`,
       },
       faAdjustCollege: {
-          root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_college`,
-          addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_college/add_fee`,
-          deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_college/delete_fee`
+        root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_college`,
+        addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_college/add_fee`,
+        deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_college/delete_fee`,
       },
       faAdjustGs: {
-          root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_gs`,
-          addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_gs/add_fee`,
-          deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_gs/delete_fee`
+        root: `${ROOTS.DASHBOARD}/accounting/fa_adjust_gs`,
+        addFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_gs/add_fee`,
+        deleteFee: `${ROOTS.DASHBOARD}/accounting/fa_adjust_gs/delete_fee`,
       },
       psElem: `${ROOTS.DASHBOARD}/accounting/ps_elem`,
       psShs: `${ROOTS.DASHBOARD}/accounting/ps_shs`,
       psCollege: `${ROOTS.DASHBOARD}/accounting/ps_college`,
-      batchAssessment: `${ROOTS.DASHBOARD}/accounting/batch_assessment`
+      batchAssessment: `${ROOTS.DASHBOARD}/accounting/batch_assessment`,
     },
     registrar: {
       root: `${ROOTS.DASHBOARD}/registrar`,
@@ -287,7 +289,7 @@ export const paths = {
         root: `${ROOTS.DASHBOARD}/registrar/year-leveling`,
         individual: `${ROOTS.DASHBOARD}/registrar/year-leveling/individual`,
         compute: `${ROOTS.DASHBOARD}/registrar/year-leveling/compute`,
-      },      
+      },
     },
     guidance: {
       root: `${ROOTS.DASHBOARD}/guidance`,
@@ -422,7 +424,7 @@ export const paths = {
           allRooms: `${ROOTS.DASHBOARD}/reports/dean/room/all-rooms-report`,
           byRoomSchedule: `${ROOTS.DASHBOARD}/reports/dean/room/by-room-schedule`,
           conflictSchedule: `${ROOTS.DASHBOARD}/reports/dean/room/conflict-schedule`,
-        }
+        },
       },
       accounting: {
         root: `${ROOTS.DASHBOARD}/reports/accounting`,
@@ -453,7 +455,7 @@ export const paths = {
           creditDebit: `${ROOTS.DASHBOARD}/reports/accounting/debit-credit-discount/credit-debit`,
         },
         studentBalance: `${ROOTS.DASHBOARD}/reports/accounting/student-balance`,
-      }
+      },
     },
     basicEducation: {
       root: `${ROOTS.DASHBOARD}/basic-education`,
@@ -491,7 +493,7 @@ export const paths = {
         },
       },
       aaoTaggingGraduates: `${ROOTS.DASHBOARD}/clearance/aao-tagging-graduates`,
-    },    
+    },
     user: {
       root: `${ROOTS.DASHBOARD}/user`,
       new: `${ROOTS.DASHBOARD}/user/new`,
@@ -563,3 +565,4 @@ export const paths = {
     },
   },
 };
+

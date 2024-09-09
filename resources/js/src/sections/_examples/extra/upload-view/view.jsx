@@ -79,9 +79,7 @@ export function UploadView() {
     },
     {
       name: 'Upload single file',
-      component: (
-        <Upload value={file} onDrop={handleDropSingleFile} onDelete={() => setFile(null)} />
-      ),
+      component: <Upload value={file} onDrop={handleDropSingleFile} onDelete={() => setFile(null)} />,
     },
     {
       name: 'Upload avatar',
@@ -146,3 +144,4 @@ export function UploadView() {
     </>
   );
 }
+

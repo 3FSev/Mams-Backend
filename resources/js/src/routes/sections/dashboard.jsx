@@ -9,7 +9,6 @@ import { LoadingScreen } from '@/components/loading-screen';
 import { AuthGuard } from '@/auth/guard';
 // import { AuthContext } from '@/auth/context/auth-context';
 
-
 // ----------------------------------------------------------------------
 
 // Overview
@@ -70,6 +69,17 @@ const BlankPage = lazy(() => import('@/pages/dashboard/blank'));
 
 // Admin
 const SchoolYear = lazy(() => import('@/pages/dashboard/admin/school-year'));
+const CreateSemester = lazy(() => import('@/pages/dashboard/admin/create-semester'));
+const FacultyType = lazy(() => import('@/pages/dashboard/admin/faculty-type'));
+const User = lazy(() => import('@/pages/dashboard/admin/user'));
+const Campus = lazy(() => import('@/pages/dashboard/admin/campus'));
+const Building = lazy(() => import('@/pages/dashboard/admin/building'));
+const Room = lazy(() => import('@/pages/dashboard/admin/room'));
+const Track = lazy(() => import('@/pages/dashboard/admin/track'));
+const Strand = lazy(() => import('@/pages/dashboard/admin/strand'));
+const Department = lazy(() => import('@/pages/dashboard/admin/department'));
+const CourseGroup = lazy(() => import('@/pages/dashboard/admin/course-group'));
+const CourseCollege = lazy(() => import('@/pages/dashboard/admin/course-college'));
 
 // ----------------------------------------------------------------------
 
@@ -90,8 +100,19 @@ export const dashboardRoutes = [
       {
         path: 'admin',
         children: [
-          { element: <SchoolYear />, index: true },
+          { element: <IndexPage />, index: true },
           { path: 'school_year', element: <SchoolYear /> },
+          { path: 'create_sem', element: <CreateSemester /> },
+          { path: 'faculty_type', element: <FacultyType /> },
+          { path: 'user', element: <User /> },
+          { path: 'campus', element: <Campus /> },
+          { path: 'building', element: <Building /> },
+          { path: 'room', element: <Room /> },
+          { path: 'track', element: <Track /> },
+          { path: 'strand', element: <Strand /> },
+          { path: 'department', element: <Department /> },
+          { path: 'course_group', element: <CourseGroup /> },
+          { path: 'course_college', element: <CourseCollege /> },
         ],
       },
       { path: 'ecommerce', element: <OverviewEcommercePage /> },
@@ -181,3 +202,4 @@ export const dashboardRoutes = [
     ],
   },
 ];
+

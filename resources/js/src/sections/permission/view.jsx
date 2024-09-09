@@ -59,9 +59,8 @@ export function PermissionDeniedView() {
               <CardHeader title={`Card ${index + 1}`} subheader="Proin viverra ligula" />
 
               <Typography variant="body2" sx={{ px: 3, py: 2, color: 'text.secondary' }}>
-                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. In enim justo,
-                rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum fringilla pede sit amet
-                augue.
+                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. In enim justo, rhoncus ut, imperdiet a,
+                venenatis vitae, justo. Vestibulum fringilla pede sit amet augue.
               </Typography>
             </Card>
           ))}
@@ -70,3 +69,4 @@ export function PermissionDeniedView() {
     </DashboardContent>
   );
 }
+

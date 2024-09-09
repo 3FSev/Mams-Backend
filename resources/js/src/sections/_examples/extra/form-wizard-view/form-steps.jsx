@@ -53,18 +53,8 @@ export function Stepper({ steps, activeStep }) {
 export function StepOne() {
   return (
     <>
-      <Field.Text
-        name="stepOne.firstName"
-        label="First name"
-        variant="filled"
-        InputLabelProps={{ shrink: true }}
-      />
-      <Field.Text
-        name="stepOne.lastName"
-        label="Last name"
-        variant="filled"
-        InputLabelProps={{ shrink: true }}
-      />
+      <Field.Text name="stepOne.firstName" label="First name" variant="filled" InputLabelProps={{ shrink: true }} />
+      <Field.Text name="stepOne.lastName" label="Last name" variant="filled" InputLabelProps={{ shrink: true }} />
     </>
   );
 }
@@ -83,14 +73,7 @@ export function StepTwo() {
 }
 
 export function StepThree() {
-  return (
-    <Field.Text
-      name="stepThree.email"
-      label="Email"
-      variant="filled"
-      InputLabelProps={{ shrink: true }}
-    />
-  );
+  return <Field.Text name="stepThree.email" label="Email" variant="filled" InputLabelProps={{ shrink: true }} />;
 }
 
 export function StepCompleted({ onReset }) {
@@ -106,13 +89,10 @@ export function StepCompleted({ onReset }) {
     >
       <Typography variant="subtitle1">All steps completed - you&apos;re finished</Typography>
 
-      <Button
-        variant="outlined"
-        onClick={onReset}
-        startIcon={<Iconify icon="solar:restart-bold" />}
-      >
+      <Button variant="outlined" onClick={onReset} startIcon={<Iconify icon="solar:restart-bold" />}>
         Reset
       </Button>
     </Box>
   );
 }
+

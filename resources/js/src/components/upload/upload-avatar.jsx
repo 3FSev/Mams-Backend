@@ -56,8 +56,7 @@ export function UploadAvatar({ sx, error, value, disabled, helperText, ...other 
         flexDirection: 'column',
         justifyContent: 'center',
         bgcolor: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.08),
-        transition: (theme) =>
-          theme.transitions.create(['opacity'], { duration: theme.transitions.duration.shorter }),
+        transition: (theme) => theme.transitions.create(['opacity'], { duration: theme.transitions.duration.shorter }),
         '&:hover': { opacity: 0.72 },
         ...(hasError && {
           color: 'error.main',
@@ -128,3 +127,4 @@ export function UploadAvatar({ sx, error, value, disabled, helperText, ...other 
     </>
   );
 }
+
