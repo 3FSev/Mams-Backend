@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RRoom;
+use App\Models\RRoomCourse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -70,7 +71,44 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), []);
+        $validator = Validator::make($request->all(), [
+            'code' => 'required|string',
+            'description' => 'required|string',
+            'capacity' => 'required|string',
+            'campus' => 'required|int',
+            'building' => 'required|int',
+            'floor' => 'required|int',
+            'scheduleConflict' => 'required',
+            'roomType' => 'required|string',
+            'capacity' => 'required|int',
+        ]);
+
+        if($validator->fails()) {
+            $firstError = $validator->errors()->first();
+
+            return response()->json([
+                'message' => $firstError,
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $validatedData = $validator->validated();
+
+        $room = RRoom::create([
+            'CODE' => $validatedData['code'],
+            'DESCRIPTION' => $validatedData['desc                  ription'],
+            'BUILDING' => $validatedData['building'],
+            'CAMPUS' => $validatedData['building'],
+            'CAPACITY' => $validatedData['capacity'],
+            'FLOOR' => $validatedData['floor'],
+            'EXLUDE_CONFLICT' => $validatedData['scheduleConflict'],
+            'IS_AIRCONDITIONED' => $validatedData['roomType'],
+            'NO_OF_STUDENTS' => $validatedData['capacity'],
+        ]);
+
+        $roomCourse = RRoomCourse::create([
+            
+        ]);
     }
 
     /**
@@ -94,6 +132,14 @@ class RoomController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $room = RRoom::where('ID', $id)->first();
+        $room_course = RRoomCourse::where('ROOM', $id);
+
+        if(!$room) {
+            return response()->json(['message' => 'Room not found!'], 404);
+        }
+
+        $room->delete();
+        return response()->json(['message' => 'Room deleted successfully!'], 200);
     }
 }

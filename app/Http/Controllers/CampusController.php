@@ -26,24 +26,29 @@ class CampusController extends Controller
         $campuses = $query->get();
 
         $campuses = $campuses->map(function ($campus) use ($fields, $rUserFields) {
-            $filteredUser = [];
+    $filteredUser = [];
 
-            if ($fields) {
-                $fieldsArray = explode(',', $fields);
-                $filteredUser = $campus->only($fieldsArray);
-            } else {
-                $filteredUser = $campus->toArray();
-            }
+    if ($fields) {
+        $fieldsArray = explode(',', $fields);
+        $filteredUser = $campus->only($fieldsArray);
+    } else {
+        $filteredUser = $campus->toArray();
+    }
 
-            if ($campus->relationLoaded('r_user') && $rUserFields) {
-                $rUserFieldsArray = explode(',', $rUserFields);
-                $filteredUser['r_user'] = $campus->r_user->only($rUserFieldsArray);
-            } elseif ($campus->relationLoaded('r_user')) {
-                $filteredUser['r_user'] = $campus->r_user;
-            }
+    if ($campus->relationLoaded('r_user') && $campus->r_user) {
+        if ($rUserFields) {
+            $rUserFieldsArray = explode(',', $rUserFields);
+            $filteredUser['r_user'] = $campus->r_user->only($rUserFieldsArray);
+        } else {
+            $filteredUser['r_user'] = $campus->r_user;
+        }
+    } elseif ($campus->relationLoaded('r_user')) {
+        $filteredUser['r_user'] = null;
+    }
 
-            return $filteredUser;
-        });
+    return $filteredUser;
+});
+
 
 
         return response()->json($campuses);
